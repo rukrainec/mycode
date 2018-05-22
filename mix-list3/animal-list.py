@@ -1,0 +1,14 @@
+#!/usr/bin/env python3
+list1 = ['cisco_nxos', 'arista_eos', 'cisco_ios']
+print(list1)
+list1.extend(['juniper'])
+print(list1)
+list1.append(['10.1.0.1', '10.2.0.1', '10.3.0.1'])
+print(list1)
+print(list1[4])
+print(list1[4][0])
+
+# create a list of 5 animals with 3 letter names and have them print to the screen
+animals = ['dog', 'cat', 'pig', 'hen', 'fox']
+animals.sort()
+print(animals)
