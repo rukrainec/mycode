@@ -3,21 +3,11 @@ This is the first repository created during a structured python course.  Content
 
 ## Overview
 
-If you're looking at this repo you probably already know what you're looking at better than I do.
-
-(comment dated 21 May 2018, subject to change)
+This repository contains all scripts created in class.  As of 23 May 2018 there is no strict or coherent organizational structure to how these scripts are arrayed in this repo.  As the scripts multiply and flourish I may come back and implement a more orderly file structure.
 
 ### Prerequisites for all scripts in this repo
 
 For now, just Python 3.x
-
-### Scripts and short descriptions
-
-```
-1. input_ip.py: lab 7, basic script that practices syntax and user input
-2. mix-list.py: lab 8, basic script that practices creating and calling different object types from lists
-
-```
 
 ### Installing
 
@@ -43,3 +33,6 @@ on Ubuntu 16.04 LTS
 
 ### Licenses
 GNUv3
+
+### Acknowledgments
+* shoutout to cazzara and gmraabe, whose code has donated several lines to mine so far
