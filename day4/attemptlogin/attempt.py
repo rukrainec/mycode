@@ -15,9 +15,10 @@ keystone_file.close() #stop reading the file, we've extracted what we need
 for i in range(len(keystone_file_lines)): #sets range as total number of lines in original file
     if "- - - - -] Authorization failed" in keystone_file_lines[i]: #sets condition for failed login
         loginfail +=1 #increment counter
+
         keystone_file_ip=keystone_file_lines[i] #new list of lines that meet if criteria
         ip_split=keystone_file_ip.split() #new list of individual words from _ip list
-        ipfail.append(ip_split[ip_split.__len__() - 1]) #add last item of new list to ipfail list
+        ipfail.append(ip_split[-1])
     elif '-] Authorization failed' in keystone_file_lines[i]:
         loginpass +=1
 print('The number of failed login attempts is ' + str(loginfail))
