@@ -43,7 +43,7 @@ while orders.lower() != 'q': #while loop to allow program to continue until user
     orders = prompt('Your orders') #runs def prompt(p) to get value of orders
     orders
     top_right(orders) #puts order you entered in top right
-    if orders[:3]=='mtr': #very specific if to run 'mtr 8.8.8.8' via os and sys and display results 3 rows down, left aligned
+    if orders[:3]=='mtr': #very specific if to run traceroute via os and sys to 8.8.8.8
         with t.location(0,3):
             os.system(orders)
 
