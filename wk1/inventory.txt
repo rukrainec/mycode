@@ -1,0 +1,1 @@
+{"Ski gear": "Box 4", "Photo albums": "Box 1", "DVD Player": "Box 2", "Extra bathroom goods": "Box 1", "Luchador mask collection": "Box 4", "Winter Clothes": "Box 3", "Feather Boas": "Box 2"}
