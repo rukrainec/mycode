@@ -11,15 +11,23 @@ import json
 import turtle
 import time
 
-def nextpass(yellowlat, yellowlon):
+def nextpass(yellowlat, yellowlon): #function to add nextpass data to user provided location
+    mylocation = turtle.Turtle()
+    mylocation.penup()
+    mylocation.color('yellow')
+    mylocation.goto(yellowlon, yellowlat)
+    mylocation.dot(8)
     passiss = 'http://api.open-notify.org/iss-pass.json'
     passiss = passiss + '?lat=' + str(yellowlat) + '&lon=' + str(yellowlon)
     response = urllib.request.urlopen(passiss)
     result1 = response.read()
     result = json.loads(result1.decode('utf-8'))
     over = result['response'][0]['risetime']
-    style = ('Arial', 6, 'bold')
+    style = ('Arial', 11, 'bold')
     mylocation.write(time.ctime(over), font=style)
+
+yellowlat = float(input('What is your lattitude in degrees?'))
+yellowlon = float(input('What is your longitude in degrees?'))
 
 #declare base variables, urls, etc
 eoss = 'http://api.open-notify.org/iss-now.json'
@@ -29,15 +37,6 @@ result = json.loads(ztrack.decode('utf-8'))
 location = result['iss_position']
 lat = location['latitude']
 lon = location['longitude']
-
-#get lat/long from user
-yellowlat = float(input('What is your lattitude in degrees?'))
-yellowlon = float(input('What is your longitude in degrees?'))
-mylocation = turtle.Turtle()
-mylocation.penup()
-mylocation.color('yellow')
-mylocation.goto(yellowlon, yellowlat)
-mylocation.dot(5)
 
 #add turtle stuff to format map/screen
 screen = turtle.Screen() #create object
@@ -57,7 +56,7 @@ lat = round(float(lat))  #because rounding them makes them easier
 iss.penup()
 iss.goto(lon, lat)
 
-
+nextpass(yellowlat, yellowlon)
 turtle.mainloop()
 
-nextpass(yellowlat, yellowlon)
+
