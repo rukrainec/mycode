@@ -59,4 +59,4 @@ iss.goto(lon, lat)
 nextpass(yellowlat, yellowlon)
 turtle.mainloop()
 
-
+print('processor time: ' + str(time.clock()))
