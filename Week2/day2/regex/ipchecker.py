@@ -14,5 +14,5 @@ def get_external_ip():
 print('Your public IP address is: ' + str(get_external_ip()))
 for i in netifaces.interfaces():
     try:
-        print('Your local IP address is: ' +str(netifaces.ifaddresses(i)[netifaces.AF_INET][0]['addr']))
+        print('Your local IP address is: ' + str(netifaces.ifaddresses(i)[netifaces.AF_INET][0]['addr']))
     except: break
