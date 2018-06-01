@@ -1,0 +1,59 @@
+! Command: show running-config
+! device: SW1 (vEOS, EOS-4.17.8M)
+!
+! boot system flash:/vEOS-lab.swi
+!
+transceiver qsfp default-mode 4x10G
+!
+hostname SW1
+!
+spanning-tree mode mstp
+!
+no aaa root
+!
+username admin role network-admin secret sha512 $6$om/BTOW328ojQlFm$Y8jFknNQD/vDzJ9M3hCIHU.DwVBsxKzdz48dqG.b5/9ZHSp0HwImV0K8dDRyOlqyg35gAsVx9LFBUdz.8Kp8b1
+!
+vlan 200
+!
+interface Ethernet1
+   switchport trunk allowed vlan 200
+   switchport mode trunk
+!
+interface Ethernet2
+   switchport access vlan 200
+!
+interface Ethernet3
+!
+interface Ethernet4
+!
+interface Ethernet5
+!
+interface Ethernet6
+!
+interface Ethernet7
+!
+interface Ethernet8
+!
+interface Ethernet9
+!
+interface Ethernet10
+!
+interface Ethernet11
+!
+interface Ethernet12
+!
+interface Management1
+   mtu 1450
+   ip address 172.16.2.10/24
+!
+ip route 0.0.0.0/0 172.16.2.100
+!
+no ip routing
+!
+management api http-commands
+   protocol http
+   no shutdown
+!
+!
+end
+

@@ -3,8 +3,7 @@
 
 import sys
 import napalm
-from napalm import get_network_driver
-import pprint as pp  
+
   
 if len(sys.argv) != 5:
    print("You supplied ", len(sys.argv)-1, " arguments but 4 are needed")
@@ -16,6 +15,9 @@ os = sys.argv[1]
 ip = sys.argv[2]
 user = sys.argv[3]
 passwd = sys.argv[4]
+
+from napalm import get_network_driver
+import pprint as pp  
 
 driver = get_network_driver(os)
 device = driver(ip,user,passwd)
