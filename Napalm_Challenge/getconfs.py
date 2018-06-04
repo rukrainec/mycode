@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 #1 June 2018 Napalm challenge part I: config gathering
 
+#This script is a precursor/proof of concept for a future script
+
 ####GOAL####: make config files for all devices listed in a file
 import sys
 import napalm

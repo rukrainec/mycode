@@ -1,0 +1,4 @@
+!
+interface Ethernet5
+    switchport mode trunk
+    switchport trunk allowed vlan 200
